@@ -54,12 +54,12 @@ export function ModernFaqSection() {
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-3xl px-8">
+      <div className="max-w-3xl px-2">
         <div>
         <h2 className="text-4xl font-bold mb-2">Frequently Asked Questions</h2>
         <div className="w-12 h-1 bg-red-500 mb-16" />
         </div>
-        <div className="space-y-6">
+        <div className="space-y-2">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
@@ -69,7 +69,7 @@ export function ModernFaqSection() {
               className="border border-gray-200 rounded-lg overflow-hidden"
             >
               <button
-                className="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                className="w-full text-left p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 onClick={() => toggleQuestion(index)}
               >
                 <div className="flex justify-between items-center">

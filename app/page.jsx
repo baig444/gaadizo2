@@ -71,7 +71,7 @@ export default function Home() {
       {/* Hero Section */}
        {/* Hero Section */}
 
-       <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 md:p-8 lg:h-[100vh] py-28 items-center px-5 md:pt-16 mt-2"
+       <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-32 md:p-8 lg:h-[100vh] py-28 items-center px-5 md:pt-16 "
        style={{
         backgroundImage: `url('https://images.pexels.com/photos/4489729/pexels-photo-4489729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
         backgroundSize: "cover",
@@ -89,7 +89,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-       <div className="lg:absolute  top-0 right-0 lg:w-[35%] h-full z-10 lg:pt-[40vw]">
+       <div className="lg:absolute  top-0 right-0 lg:w-[35%] h-full z-10">
        <div className="space-y-8 lg:sticky lg:top-24 lg:bottom-10 z-50 flex justify-end px-4">
           <CarServiceFormComponent/>
           </div>

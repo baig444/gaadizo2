@@ -138,7 +138,7 @@ export function AppDownloadComponent() {
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-blue-500/20 blur-3xl" />
             <img
-              src="/placeholder.svg?height=400&width=800"
+              src="https://play-lh.googleusercontent.com/-PckldWYprifv0HhNZozRxvtWnrSuAY9fyzUJQ-busfm4O0ACZoQ-hAmU5qhs_dynA=w5120-h2880-rw"
               alt="Gaadizo App Preview"
               className="relative rounded-2xl shadow-2xl"
             />

@@ -61,8 +61,8 @@ export function CarServiceFormComponent() {
   }
 
   return (
-    <div>
-      <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl space-y-6">
+    <div className="md:w-full w-full">
+      <div className="bg-white rounded-lg lg:p-6 pt-8 space-y-6">
         {/* Location Selector */}
         <div className="mb-4">
           <div className="relative">
@@ -99,7 +99,7 @@ export function CarServiceFormComponent() {
         </div>
 
         {/* Submit Button */}
-        <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg mb-6">
+        <Button className="w-full bg-[#3399FF] text-white py-3 rounded-lg mb-6">
           CHECK PRICES FOR FREE
         </Button>
 

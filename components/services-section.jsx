@@ -117,13 +117,13 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <div className="max-w-3xl px-10 py-12">
-       <div className="mb-8">
+    <div className="max-w-3xl lg:px-10 py-12">
+       <div className="mb-8 px-5">
          <h2 className="text-4xl font-bold mb-2">Our Services</h2>
          <div className="w-12 h-1 bg-red-500 mb-4" />
          <h1 className="text-xl text-gray-600">Experience Premium Car care Services</h1>
          </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -135,7 +135,7 @@ export function ServicesSection() {
           >
             <Link 
               href="#"
-              className="block p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
+              className="block lg:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
             >
               <div className="flex flex-col items-center text-center space-y-4">
                 {service.icon}
