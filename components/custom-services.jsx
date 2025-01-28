@@ -57,7 +57,7 @@ export function CustomServicesComponent() {
       <div className="max-w-3xl px-8">
         <div className="mb-8">
           <h2 className="text-4xl font-bold mb-2">Curated Custom Services</h2>
-          <div className="mt-2 w-12 h-1 bg-red-500" />
+          <div className="mt-2 w-12 h-1 bg-[#3399FF]" />
         </div>
 
         <div className="relative">

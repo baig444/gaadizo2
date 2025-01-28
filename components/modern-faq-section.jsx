@@ -54,10 +54,10 @@ export function ModernFaqSection() {
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-3xl px-2">
+      <div className="max-w-3xl px-8">
         <div>
         <h2 className="text-4xl font-bold mb-2">Frequently Asked Questions</h2>
-        <div className="w-12 h-1 bg-red-500 mb-16" />
+        <div className="w-12 h-1 bg-[#3399FF] mb-16" />
         </div>
         <div className="space-y-2">
           {faqs.map((faq, index) => (

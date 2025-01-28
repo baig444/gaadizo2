@@ -88,7 +88,7 @@ export function ModernFooter() {
   ]
 
   return (
-    <footer className="relative bg-[#0f172a] text-gray-300 overflow-hidden">
+    <footer className="hidden lg:flex relative bg-[#0f172a] text-gray-300 overflow-hidden">
       {/* Background Gradient Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10" />
       <div className="absolute inset-0 backdrop-blur-3xl" />

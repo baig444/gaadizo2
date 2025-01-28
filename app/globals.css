@@ -11,6 +11,9 @@ body {
   font-family: 'Matter', sans-serif;
 }
 
+.scrollbar {
+  scrollbar-width: none;
+}
 @layer base {
   :root {
     --radius: 0.5rem;

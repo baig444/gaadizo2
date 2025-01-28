@@ -42,8 +42,8 @@ export function PriceComparison() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-3xl px-8">
+    <section className="bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-3xl px-3 lg:px-8">
         <div className="mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -92,10 +92,10 @@ export function PriceComparison() {
                   <td className="p-6">
                     <div className="flex items-center justify-center gap-2">
                       <span className="font-semibold text-orange-600">₹{service.ourPrice}</span>
-                      <div className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full flex items-center gap-1">
+                      {/* <div className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full flex items-center gap-1">
                         <Check className="w-3 h-3" />
                         Save {service.savings}%
-                      </div>
+                      </div> */}
                     </div>
                   </td>
                   <td className="p-6">

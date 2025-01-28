@@ -74,7 +74,7 @@ export function WhyChooseSection() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4">Why Choose Gaadizo</h2>
+            <h2 className="text-3xl font-bold mb-4">Why Choose Gaadizo for Service</h2>
             <p className="text-lg text-neutral-500 dark:text-neutral-400">
               Experience the best car service with us
             </p>
@@ -116,7 +116,7 @@ export function WhyChooseSection() {
             </p>
           </motion.div>
 
-          <div className="grid gap-8">
+          <div className="grid gap-1">
             {steps.map((step, index) => (
               <motion.div
                 key={index}

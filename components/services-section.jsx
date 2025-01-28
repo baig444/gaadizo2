@@ -120,10 +120,10 @@ export function ServicesSection() {
     <div className="max-w-3xl lg:px-10 py-12">
        <div className="mb-8 px-5">
          <h2 className="text-4xl font-bold mb-2">Our Services</h2>
-         <div className="w-12 h-1 bg-red-500 mb-4" />
+         <div className="w-12 h-1 bg-[#3399FF] mb-4" />
          <h1 className="text-xl text-gray-600">Experience Premium Car care Services</h1>
          </div>
-      <div className="grid grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 md:grid-cols-3 lg:grid-cols-6 gap-2 items-center">
         {services.map((service, index) => (
           <motion.div
             key={index}

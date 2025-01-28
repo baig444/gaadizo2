@@ -52,7 +52,7 @@ export function AppDownloadComponent() {
                 initial={{ opacity: 0, width: 0 }}
                 animate={{ opacity: 1, width: "3rem" }}
                 transition={{ delay: 0.3 }}
-                className="h-1 bg-red-500"
+                className="h-1 bg-[#3399FF]"
               />
             </div>
 
@@ -99,7 +99,7 @@ export function AppDownloadComponent() {
           {/* Right Column - Stats */}
           <div 
             ref={statsRef}
-            className="grid grid-cols-2 max-w-lg"
+            className="grid grid-cols-4 max-w-lg gap-8"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -118,7 +118,7 @@ export function AppDownloadComponent() {
                     damping: 20,
                     delay: index * 0.1 
                   }}
-                  className="text-3xl md:text-4xl font-bold text-gray-900 mb-2"
+                  className="text-xl md:text-3xl font-bold text-gray-900 mb-2"
                 >
                   {stat.value}
                 </motion.div>
@@ -140,7 +140,7 @@ export function AppDownloadComponent() {
             <img
               src="https://play-lh.googleusercontent.com/-PckldWYprifv0HhNZozRxvtWnrSuAY9fyzUJQ-busfm4O0ACZoQ-hAmU5qhs_dynA=w5120-h2880-rw"
               alt="Gaadizo App Preview"
-              className="relative rounded-2xl shadow-2xl"
+              className="relative rounded-2xl shadow-2xl h-96 w-96 object-cover object-top"
             />
           </div>
         </motion.div>

@@ -76,7 +76,7 @@ export function SparePartsSection() {
             <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
               Original Spare Parts
             </h2>
-            <div className="mt-2 w-12 h-1 bg-red-500 mb-4" />
+            <div className="mt-2 w-12 h-1 bg-[#3399FF] mb-4" />
             </div>
             <p className="text-xl text-neutral-500 dark:text-neutral-400">
               Extended Warranty with Gaadizo
@@ -120,14 +120,14 @@ export function SparePartsSection() {
               {brands.map((brand, index) => (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 w-1/4"
+                  className="flex-shrink-0 lg:w-1/4 w-1/2"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
                   <div 
-                    className="bg-white rounded-xl p-8 flex items-center justify-center h-40 group hover:shadow-xl transition-all duration-300 border border-neutral-200 border-gray-100 dark:border-neutral-800"
+                    className="bg-white rounded-xl p-8 flex items-center justify-center h-40 group hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-neutral-800"
                     style={{
                       background: `linear-gradient(135deg, white 0%, ${brand.color}08 100%)`
                     }}
@@ -142,9 +142,10 @@ export function SparePartsSection() {
               ))}
             </motion.div>
           </div>
-        </div>
+        </div>          
+           <hr />
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-8 mt-5">
           {[
             {
               icon: Shield,
@@ -194,6 +195,8 @@ export function SparePartsSection() {
           ))}
         </div>
       </div>
+
+      <hr className="mt-6" />
     </section>
   )
 }

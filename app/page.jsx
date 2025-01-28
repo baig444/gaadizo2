@@ -97,43 +97,102 @@ export default function Home() {
       <ServicesSection/>
        {/* Testimonials Section */}
        <div className="bg-gray-50 py-16 px-10">
-        <div className="max-w-2xl">
-         <div className="mb-8">
-         <h2 className="text-4xl font-bold mb-2">What Our Customers Say</h2>
-         <div className="w-12 h-1 bg-red-500" />
-         </div>
-          <div className="relative">
-            <motion.div
-              key={currentTestimonial}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white p-6 rounded-lg shadow-lg"
-            >
-              <div className="flex items-center mb-4">
-                <Avatar className="h-12 w-12">
-                  <AvatarImage src={testimonials[currentTestimonial].avatar} alt={testimonials[currentTestimonial].name} />
-                  <AvatarFallback>{testimonials[currentTestimonial].name.charAt(0)}</AvatarFallback>
-                </Avatar>
-                <div className="ml-4">
-                  <div className="font-semibold">{testimonials[currentTestimonial].name}</div>
-                  <div className="text-sm text-neutral-500 dark:text-neutral-400">{testimonials[currentTestimonial].location}</div>
-                </div>
+  <div className="max-w-4xl mx-auto">
+    <div className="mb-8 text-center">
+      <h2 className="text-4xl font-bold mb-2">What Our Customers Say</h2>
+      <div className="w-12 h-1 bg-red-500 mx-auto" />
+    </div>
+    <div className="relative">
+      <motion.div
+        key={currentTestimonial}
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -50 }}
+        transition={{ duration: 0.5 }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
+        {/* First Testimonial */}
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <div className="flex items-center mb-4">
+            <Avatar className="h-12 w-12">
+              <AvatarImage
+                src={testimonials[currentTestimonial].avatar}
+                alt={testimonials[currentTestimonial].name}
+              />
+              <AvatarFallback>
+                {testimonials[currentTestimonial].name.charAt(0)}
+              </AvatarFallback>
+            </Avatar>
+            <div className="ml-4">
+              <div className="font-semibold">
+                {testimonials[currentTestimonial].name}
               </div>
-              <p className="text-gray-700 italic">{testimonials[currentTestimonial].comment}</p>
-            </motion.div>
-            <div className="flex justify-between mt-4">
-              <Button variant="outline" size="icon" onClick={prevTestimonial}>
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon" onClick={nextTestimonial}>
-                <ChevronRight className="h-4 w-4" />
-              </Button>
+              <div className="text-sm text-neutral-500 dark:text-neutral-400">
+                {testimonials[currentTestimonial].location}
+              </div>
             </div>
           </div>
+          <p className="text-gray-700 italic">
+            {testimonials[currentTestimonial].comment}
+          </p>
         </div>
+
+        {/* Second Testimonial */}
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <div className="flex items-center mb-4">
+            <Avatar className="h-12 w-12">
+              <AvatarImage
+                src={
+                  testimonials[
+                    (currentTestimonial + 1) % testimonials.length
+                  ].avatar
+                }
+                alt={
+                  testimonials[
+                    (currentTestimonial + 1) % testimonials.length
+                  ].name
+                }
+              />
+              <AvatarFallback>
+                {testimonials[
+                  (currentTestimonial + 1) % testimonials.length
+                ].name.charAt(0)}
+              </AvatarFallback>
+            </Avatar>
+            <div className="ml-4">
+              <div className="font-semibold">
+                {testimonials[
+                  (currentTestimonial + 1) % testimonials.length
+                ].name}
+              </div>
+              <div className="text-sm text-neutral-500 dark:text-neutral-400">
+                {testimonials[
+                  (currentTestimonial + 1) % testimonials.length
+                ].location}
+              </div>
+            </div>
+          </div>
+          <p className="text-gray-700 italic">
+            {testimonials[
+              (currentTestimonial + 1) % testimonials.length
+            ].comment}
+          </p>
+        </div>
+      </motion.div>
+
+      {/* Navigation Buttons */}
+      <div className="flex justify-between mt-4">
+        <Button variant="outline" size="icon" onClick={prevTestimonial}>
+          <ChevronLeft className="h-4 w-4" />
+        </Button>
+        <Button variant="outline" size="icon" onClick={nextTestimonial}>
+          <ChevronRight className="h-4 w-4" />
+        </Button>
       </div>
+    </div>
+  </div>
+</div>
+
       <ModernFaqSection/>
       <CustomServicesComponent/>
       <AppDownloadComponent/>
