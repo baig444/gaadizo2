@@ -131,13 +131,13 @@ export function ServicesSection() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
       whileHover={{ scale: 1.05 }}
-      className="relative flex flex-col items-center justify-between h-full p-4"
+      className="relative flex flex-col items-center justify-between h-full "
     >
       <Link href="#" className="block w-full">
         <div className="flex flex-col items-center justify-center space-y-2 h-full">
           <div className="w-12 h-12 flex items-center justify-center">{service.icon}</div> 
           {/* Ensures uniform icon size */}
-          <h3 className="text-sm font-medium text-gray-900">{service.title}</h3>
+          <h3 className="text-xs font-medium text-gray-900">{service.title}</h3>
           {service.isNew && (
             <span className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
               New
