@@ -19,7 +19,7 @@ export function PromoBanner() {
         </button>
 
         <div className="flex items-center gap-3 mx-auto">
-          <div className="bg-red-600 rounded-md p-1.5">
+          <div className="bg-[#3399FF] rounded-md p-1.5">
             <svg
               width="20"
               height="20"
@@ -36,7 +36,7 @@ export function PromoBanner() {
           <Button
             variant="destructive"
             size="sm"
-            className="bg-red-600 hover:bg-red-700 text-white font-medium px-5">
+            className="bg-[#3399FF]  text-white font-medium px-5">
             INSTALL
           </Button>
         </div>

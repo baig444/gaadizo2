@@ -13,10 +13,10 @@ import {
 
 const Navbar = () => {
   return (
-    <div className="lg:absolute z-10 w-full h-16 max-lg:fixed max-lg:top-0">
+    <div className="lg:absolute z-10 w-full max-lg:fixed max-lg:top-0">
       <PromoBanner/>
      {/* Navigation */}
-     <nav className=" flex items-center justify-between p-4 max-lg:bg-white shadow-xl">
+     <nav className=" flex items-center justify-between p-3 max-lg:bg-white shadow-2xl">
         <div className="flex items-center gap-5">
         <div className="lg:hidden">
         <Sheet>
@@ -43,7 +43,7 @@ const Navbar = () => {
 </Sheet>
         </div>
           <div className="flex items-center">
-            <img src="https://www.gaadizo.com/images/logo.png" alt="Gaadizo" className="w-32" />
+            <img src="https://www.gaadizo.com/images/logo.png" alt="Gaadizo" className="lg:w-32 w-24" />
           </div>
         </div>
       </nav>

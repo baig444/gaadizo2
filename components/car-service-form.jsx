@@ -93,13 +93,13 @@ export function CarServiceFormComponent() {
 
   return (
     <div className="md:w-full w-full">
-      <div className="bg-white rounded-lg lg:p-6 pt-8 space-y-6 lg:shadow-lg min-h-[60vh]">
+      <div className="bg-white rounded-sm lg:p-6 pt-8 space-y-6 lg:shadow-lg min-h-[60vh]">
         {/* Location Selector */}
-        <h1 className="text-3xl font-bold text-center lg:text-left">Experience The Best
+        <h1 className="text-lg lg:text-3xl font-bold text-center lg:text-left">Experience The Best
         Car Services In Gurgaon</h1>
         <div className="mb-4">
           <div className="relative">
-            <select className="w-full p-2 border border-neutral-500 rounded-sm appearance-none bg-white pr-10 dark:border-neutral-800">
+            <select className="w-full h-12 p-2 border border-neutral-300 rounded-xs appearance-none bg-white pr-10 dark:border-neutral-800">
               <option>DELHI</option>
               <option>MUMBAI</option>
               <option>BANGALORE</option>
@@ -111,8 +111,9 @@ export function CarServiceFormComponent() {
         {/* Car Selector */}
         <div className="mb-4">
           <Button
+          size="lg"
             variant="outline"
-            className="w-full justify-between rounded-sm border border-neutral-500"
+            className="w-full justify-between rounded-xs border border-neutral-300"
             onClick={() => setIsDialogOpen(true)}
           >
             {selectedBrand && selectedModel && selectedFuel
@@ -127,12 +128,12 @@ export function CarServiceFormComponent() {
           <Input
             type="tel"
             placeholder="ENTER MOBILE NUMBER"
-            className="w-full p-3 border border-neutral-600 rounded-sm dark:border-neutral-800"
+            className="w-full p-3 border border-neutral-300 rounded-xs dark:border-neutral-800 outline-none"
           />
         </div>
 
         {/* Submit Button */}
-        <Button className="w-full bg-[#3399FF] text-white py-3 rounded-lg mb-6">
+        <Button className="w-full bg-[#3399FF] text-white py-3 rounded-sm mb-6">
           CHECK PRICES FOR FREE
         </Button>
 

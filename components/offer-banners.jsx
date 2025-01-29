@@ -16,11 +16,11 @@ export function OfferBanners() {
   ]
 
   return (
-    <div className="scrollbar lg:hidden overflow-x-auto mt-36">
-      <div className="flex min-w-max pb-4">
+    <div className="scrollbar lg:hidden overflow-x-auto mt-32">
+      <div className="flex min-w-max">
       {
         offers.map((offer, index) => (
-            <img key={index} src={offer.bg} alt="image" className="w-[23rem] h-60 object-contain rounded-lg mx-1" />
+            <img key={index} src={offer.bg} alt="image" className="w-[22rem] h-48 rounded-lg mx-1" />
         ))
       }
       </div>
