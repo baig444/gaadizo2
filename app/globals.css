@@ -7,8 +7,12 @@
   font-family: 'Matter';
   src: url('/matter-regular.woff2') format('woff2')
 }
+@font-face {
+  font-family: 'GT';
+  src: url('/GT.OTF') format('opentype')
+}
 body {
-  font-family: 'Matter', sans-serif;
+  font-family: 'GT', sans-serif;
 }
 
 .scrollbar {

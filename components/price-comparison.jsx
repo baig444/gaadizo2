@@ -43,7 +43,7 @@ export function PriceComparison() {
 
   return (
     <section className="bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-3xl px-3 lg:px-8">
+      <div className="lg:max-w-[65%] px-3 lg:px-8">
         <div className="mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -51,11 +51,11 @@ export function PriceComparison() {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-sm md:text-4xl font-bold">
               Miles ahead... also, in{"'"}
               <span className="text-orange-500">SAVINGS</span>
             </h2>
-            <p className="text-neutral-500 text-lg dark:text-neutral-400">
+            <p className="text-neutral-500 text-sm lg:text-lg dark:text-neutral-400">
               Price comparison of different services
             </p>
           </motion.div>
@@ -65,8 +65,8 @@ export function PriceComparison() {
           <table className="w-full">
             <thead>
               <tr className="border-b">
-                <th className="text-left p-6 bg-gray-50">Packages</th>
-                <th className="p-6 bg-orange-50 relative">
+                <th className="text-left p-3 bg-gray-50">Packages</th>
+                <th className="p-3 bg-orange-50 relative">
                   <div className="absolute -top-1 right-4 bg-orange-500 text-white text-xs px-2 py-1 rounded-b-lg flex items-center gap-1">
                     <Percent className="w-3 h-3" />
                     SAVE 30%
@@ -88,8 +88,8 @@ export function PriceComparison() {
                   transition={{ delay: index * 0.1 }}
                   className="border-b last:border-0 hover:bg-gray-50/50 transition-colors"
                 >
-                  <td className="p-6 text-gray-900">{service.name}</td>
-                  <td className="p-6">
+                  <td className="p-3 text-gray-900">{service.name}</td>
+                  <td className="p-3">
                     <div className="flex items-center justify-center gap-2">
                       <span className="font-semibold text-orange-600">₹{service.ourPrice}</span>
                       {/* <div className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full flex items-center gap-1">

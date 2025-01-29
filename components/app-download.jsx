@@ -35,8 +35,8 @@ export function AppDownloadComponent() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-6xl px-8">
+    <section className="py-12 bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-6xl px-3">
         <div className="grid lg:grid-cols-1 gap-12">
           {/* Left Column - App Info */}
           <div className="space-y-8">
@@ -44,7 +44,7 @@ export function AppDownloadComponent() {
               <motion.h2 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-4xl font-bold mb-4"
+                className="md:text-sm lg:text-4xl font-bold mb-4"
               >
                 Download the Gaadizo App
               </motion.h2>
@@ -70,7 +70,7 @@ export function AppDownloadComponent() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="flex flex-wrap gap-4"
+              className="flex gap-2"
             >
               <Button 
                 className="bg-black hover:bg-gray-800 text-white px-6 py-6 rounded-xl"
@@ -97,39 +97,41 @@ export function AppDownloadComponent() {
           </div>
 
           {/* Right Column - Stats */}
-          <div 
-            ref={statsRef}
-            className="grid grid-cols-4 max-w-lg gap-8"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: index * 0.1 }}
-                
-              >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={isInView ? { scale: 1 } : {}}
-                  transition={{ 
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 20,
-                    delay: index * 0.1 
-                  }}
-                  className="text-xl md:text-3xl font-bold text-gray-900 mb-2"
-                >
+          <div className="lg:max-w-[75%]">
+        <div className="hidden lg:grid grid-cols-4 md:grid-cols-4 gap-2 md:gap-8 items-center">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="text-center space-y-2"
+            >
+              <div className="flex items-center justify-center gap-1">
+                <span className="text-md md:text-4xl font-bold text-gray-900">
                   {stat.value}
-                </motion.div>
-                <div className="text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
+                </span>
+                {stat.icon && (
+                  <stat.icon className="h-6 w-6 text-yellow-400 fill-yellow-400" />
+                )}
+                {stat.unit && (
+                  <span className="text-xl md:text-2xl font-semibold text-gray-700">
+                    {stat.unit}
+                  </span>
+                )}
+              </div>
+              <p className="text-xs text-gray-600 font-medium">
+                {stat.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
         </div>
 
         {/* Mobile App Preview */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
@@ -138,12 +140,12 @@ export function AppDownloadComponent() {
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-blue-500/20 blur-3xl" />
             <img
-              src="https://play-lh.googleusercontent.com/-PckldWYprifv0HhNZozRxvtWnrSuAY9fyzUJQ-busfm4O0ACZoQ-hAmU5qhs_dynA=w5120-h2880-rw"
-              alt="Gaadizo App Preview"
+              src=""
+              alt="Gaadizo App"
               className="relative rounded-2xl shadow-2xl h-96 w-96 object-cover object-top"
             />
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )

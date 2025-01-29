@@ -14,6 +14,7 @@ import { PriceComparison } from "@/components/price-comparison"
 import { WhyChooseSection } from "@/components/why-choose-section"
 import { CarServiceFormComponent } from "@/components/car-service-form"
 import { ServicesSection } from "@/components/services-section"
+import { TestimonialSliderComponent } from "@/components/testimonial-slider"
 
 export default function Home() {
   const [selectedCity, setSelectedCity] = useState("")
@@ -89,18 +90,18 @@ export default function Home() {
             </p>
           </div>
         </div>
-       <div className="lg:absolute  top-0 right-0 lg:w-[35%] h-full z-10">
-       <div className="space-y-8 lg:sticky lg:top-24 lg:bottom-10 z-50 flex justify-end px-4">
+       <div className="lg:absolute top-0 right-0 lg:w-[35%] h-full z-10">
+       <div className="space-y-8 lg:sticky lg:top-28 z-50 flex justify-end px-4">
           <CarServiceFormComponent/>
           </div>
           </div>
       <ServicesSection/>
        {/* Testimonials Section */}
-       <div className="bg-gray-50 py-16 px-10">
-  <div className="max-w-4xl mx-auto">
-    <div className="mb-8 text-center">
-      <h2 className="text-4xl font-bold mb-2">What Our Customers Say</h2>
-      <div className="w-12 h-1 bg-red-500 mx-auto" />
+       <div className="hidden lg:block bg-gray-50 py-16 px-10">
+  <div className="lg:max-w-[65%]">
+    <div className="mb-8">
+      <h2 className="md:text-sm lg:text-4xl font-bold mb-2">What Our Customers Say</h2>
+      <div className="w-12 h-1 bg-red-500" />
     </div>
     <div className="relative">
       <motion.div
@@ -109,7 +110,7 @@ export default function Home() {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -50 }}
         transition={{ duration: 0.5 }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+        className="grid grid-cols-1 md:grid-cols-1 gap-6"
       >
         {/* First Testimonial */}
         <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -192,14 +193,14 @@ export default function Home() {
     </div>
   </div>
 </div>
+<TestimonialSliderComponent/>
 
       <ModernFaqSection/>
       <CustomServicesComponent/>
       <AppDownloadComponent/>
       <SparePartsSection/>
       <PriceComparison/>
-      <WhyChooseSection/>
-      
+      <WhyChooseSection/>     
     </div>
   )
 }

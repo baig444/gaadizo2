@@ -14,28 +14,32 @@ export function CustomServicesComponent() {
       icon: Battery,
       name: "Batteries",
       tag: "SALE",
-      tagColor: "bg-green-500"
+      tagColor: "bg-green-500",
+      image: "https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/battery_image_for_curated_section_large/liveguard-battery-140.png"
     },
     {
       icon: Disc,
       name: "Brakes",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-bgvM6rqnXOMWiBLCBKQpl47CZvh4h1.png"
+      image: "./brake.png"
     },
     {
       icon: Thermometer,
-      name: "AC Parts"
+      name: "AC Parts",
+      image: "./acc.png"
     },
     {
       icon: Timer,
       name: "Clutch",
       tag: "NEW",
-      tagColor: "bg-blue-500"
+      tagColor: "bg-blue-500",
+      image: "https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/car_parts_icons/brakes_2/xxhdpi.png"
     },
     {
       icon: CircleDot,
       name: "Tyres",
       tag: "SALE",
-      tagColor: "bg-green-500"
+      tagColor: "bg-green-500",
+      image: "https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/car_parts_icons/brakes_2/xxhdpi.png"
     }
   ]
 
@@ -54,33 +58,14 @@ export function CustomServicesComponent() {
 
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-3xl px-8">
+      <div className="lg:max-w-[65%] px-3">
         <div className="mb-8">
-          <h2 className="text-4xl font-bold mb-2">Curated Custom Services</h2>
+          <h2 className="md:text-sm lg:text-4xl font-bold mb-2">Curated Custom Services</h2>
           <div className="mt-2 w-12 h-1 bg-[#3399FF]" />
         </div>
 
         <div className="relative">
           {/* Navigation Buttons */}
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 rounded-full shadow-lg border-gray-200 bg-white hover:bg-gray-50"
-            onClick={() => scroll("'left'")}
-            disabled={currentIndex === 0}
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </Button>
-
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 rounded-full shadow-lg border-gray-200 bg-white hover:bg-gray-50"
-            onClick={() => scroll("'right'")}
-            disabled={currentIndex === services.length - 1}
-          >
-            <ChevronRight className="h-4 w-4" />
-          </Button>
 
           {/* Services Slider */}
           <div 
@@ -95,9 +80,9 @@ export function CustomServicesComponent() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Card className="w-48 cursor-pointer hover:shadow-lg transition-shadow">
+                  <Card className="w-48 cursor-pointer bg-transparent border-none">
                     <CardContent className="p-4">
-                      <div className="relative aspect-square rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
+                      <div className="relative aspect-square rounded-lg  mb-4 flex items-center justify-center">
                         {service.tag && (
                           <Badge 
                             className={`absolute top-2 right-2 ${service.tagColor} text-white border-0`}
@@ -105,7 +90,7 @@ export function CustomServicesComponent() {
                             {service.tag}
                           </Badge>
                         )}
-                        <service.icon className="w-12 h-12 text-gray-600" />
+                        <img src={service.image} alt={service.name} />
                       </div>
                       <h3 className="font-medium text-center">{service.name}</h3>
                     </CardContent>
@@ -120,11 +105,7 @@ export function CustomServicesComponent() {
             {services.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  currentIndex === index 
-                    ? "bg-red-500 w-6" 
-                    : "bg-gray-300 hover:bg-gray-400"
-                }`}
+                className={`w-2 h-2 rounded-full transition-all duration-300 `}
                 onClick={() => setCurrentIndex(index)}
                 aria-label={`Go to slide ${index + 1}`}
               />

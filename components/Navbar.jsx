@@ -2,15 +2,45 @@
 import { Car, Menu } from "lucide-react"
 import { Button } from "../components/ui/button"
 import { PromoBanner } from "./promo-banner"
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+
 const Navbar = () => {
   return (
-    <div className="lg:absolute z-10 w-full h-16 max-md:fixed max-md:top-0">
+    <div className="lg:absolute z-10 w-full h-16 max-lg:fixed max-lg:top-0">
       <PromoBanner/>
      {/* Navigation */}
-     <nav className=" flex items-center justify-between p-4 max-md:bg-white shadow-xl">
+     <nav className=" flex items-center justify-between p-4 max-lg:bg-white shadow-xl">
         <div className="flex items-center gap-5">
         <div className="lg:hidden">
-        <Menu className="text-[#0066CC] text-3xl" />
+        <Sheet>
+  <SheetTrigger><Menu className="text-[#0066CC] text-3xl cursor-pointer" /></SheetTrigger>
+  <SheetContent>
+    <SheetHeader>
+      <SheetDescription>
+      <div className="w-64 bg-white p-4 space-y-4">
+      <nav className="space-y-2">
+        <a href="#" className="block text-blue-600 font-bold border-b border-gray-200 pb-4">HOME</a>
+        <a href="#" className="block text-gray-900 border-b border-gray-200 pb-4">OUR SERVICES</a>
+        <a href="#" className="block text-gray-900 border-b border-gray-200 pb-4">GAADIZO SUPER</a>
+        <a href="#" className="block text-gray-900 border-b border-gray-200 pb-4">PARTNERS</a>
+        <a href="#" className="block text-gray-900 border-b border-gray-200 pb-4">LOGIN</a>
+        <a href="#" className="block text-white bg-blue-500 rounded-full px-4 py-2">
+          MY REWARDS
+        </a>
+        <a href="#" className="block text-gray-900">MORE</a>
+      </nav>
+    </div>
+      </SheetDescription>
+    </SheetHeader>
+  </SheetContent>
+</Sheet>
         </div>
           <div className="flex items-center">
             <img src="https://www.gaadizo.com/images/logo.png" alt="Gaadizo" className="w-32" />

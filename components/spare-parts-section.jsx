@@ -10,22 +10,22 @@ export function SparePartsSection() {
   const brands = [
     {
       name: "Bosch",
-      logo: "/placeholder.svg?height=80&width=160",
+      logo: "https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/original_spare_parts_icons/bosch.jpg",
       color: "#ED0007"
     },
     {
       name: "Valeo",
-      logo: "/placeholder.svg?height=80&width=160",
+      logo: "https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/original_spare_parts_icons/valeo.jpg",
       color: "#7AB51D"
     },
     {
       name: "Mahle",
-      logo: "/placeholder.svg?height=80&width=160",
+      logo: "https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/original_spare_parts_icons/mahle.jpg",
       color: "#004B93"
     },
     {
       name: "NGK",
-      logo: "/placeholder.svg?height=80&width=160",
+      logo: "https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/original_spare_parts_icons/ntn.jpg",
       color: "#E60012"
     },
     {
@@ -65,7 +65,7 @@ export function SparePartsSection() {
 
   return (
     <section className="py-24 bg-gradient-to-b from-white via-gray-50 to-white">
-      <div className="max-w-3xl px-8">
+      <div className="lg:max-w-[65%] px-8">
         <div className="mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -73,12 +73,12 @@ export function SparePartsSection() {
             viewport={{ once: true }}
           >
             <div>
-            <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
+            <h2 className="text-sm lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
               Original Spare Parts
             </h2>
             <div className="mt-2 w-12 h-1 bg-[#3399FF] mb-4" />
             </div>
-            <p className="text-xl text-neutral-500 dark:text-neutral-400">
+            <p className="lg:text-xl text-neutral-500 dark:text-neutral-400">
               Extended Warranty with Gaadizo
             </p>
           </motion.div>
@@ -120,7 +120,7 @@ export function SparePartsSection() {
               {brands.map((brand, index) => (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 lg:w-1/4 w-1/2"
+                  className="flex-shrink-0 lg:w-1/4 "
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -128,14 +128,14 @@ export function SparePartsSection() {
                 >
                   <div 
                     className="bg-white rounded-xl p-8 flex items-center justify-center h-40 group hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-neutral-800"
-                    style={{
-                      background: `linear-gradient(135deg, white 0%, ${brand.color}08 100%)`
-                    }}
+                    // style={{
+                    //   background: `linear-gradient(135deg, white 0%, ${brand.color}08 100%)`
+                    // }}
                   >
                     <img
                       src={brand.logo || "/placeholder.svg"}
                       alt={`${brand.name} logo`}
-                      className="max-w-[160px] h-auto opacity-70 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+                      className="max-w-[280px]  object-cover h-auto opacity-70 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
                     />
                   </div>
                 </motion.div>
@@ -143,9 +143,8 @@ export function SparePartsSection() {
             </motion.div>
           </div>
         </div>          
-           <hr />
 
-        <div className="grid md:grid-cols-4 gap-8 mt-5">
+        {/* <div className="grid md:grid-cols-4 gap-8 mt-5">
           {[
             {
               icon: Shield,
@@ -193,7 +192,7 @@ export function SparePartsSection() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
 
       <hr className="mt-6" />

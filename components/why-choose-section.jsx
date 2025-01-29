@@ -65,7 +65,7 @@ export function WhyChooseSection() {
 
   return (
     <section className="py-20 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-4xl px-8">
+      <div className="lg:max-w-[65%] px-4">
         {/* Benefits Section */}
         <div className="mb-20">
           <motion.div
@@ -74,13 +74,13 @@ export function WhyChooseSection() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4">Why Choose Gaadizo for Service</h2>
-            <p className="text-lg text-neutral-500 dark:text-neutral-400">
+            <h2 className="text-sm lg:text-3xl font-bold mb-4">Why Choose Gaadizo for Service</h2>
+            <p className="lg:text-lg text-neutral-500 dark:text-neutral-400">
               Experience the best car service with us
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 lg:grid-cols-2 gap-4 items-center">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
@@ -88,14 +88,14 @@ export function WhyChooseSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-start gap-4 p-6 rounded-xl bg-white hover:shadow-lg transition-shadow max-w-fit"
+                className="flex items-center gap-2 p-1 rounded-xl bg-white"
               >
                 <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
                   <benefit.icon className="w-6 h-6 text-blue-500" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">{benefit.title}</h3>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400">{benefit.description}</p>
+                  <h3 className="font-semibold text-sm mb-2">{benefit.title}</h3>
+                  {/* <p className="text-sm text-neutral-500 dark:text-neutral-400">{benefit.description}</p> */}
                 </div>
               </motion.div>
             ))}
@@ -110,8 +110,8 @@ export function WhyChooseSection() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4">How Gaadizo Works</h2>
-            <p className="text-lg text-neutral-500 dark:text-neutral-400">
+            <h2 className="lg:text-3xl font-bold mb-4">How Gaadizo Works</h2>
+            <p className="lg:text-lg text-neutral-500 dark:text-neutral-400">
               Simple steps to get your car serviced
             </p>
           </motion.div>
@@ -124,7 +124,7 @@ export function WhyChooseSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-center gap-8"
+                className="flex items-center gap-2"
               >
                 <div className="relative">
                   <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center">
@@ -134,13 +134,13 @@ export function WhyChooseSection() {
                     <div className="absolute top-full left-1/2 h-8 w-px bg-blue-100" />
                   )}
                 </div>
-                <div className="flex-1 bg-white p-6 rounded-xl hover:shadow-lg transition-shadow">
-                  <h3 className="font-semibold mb-2">{step.title}</h3>
+                <div className="flex-1  p-4 rounded-xl hover:shadow-lg transition-shadow">
+                  <h3 className="font-semibold text-sm mb-2">{step.title}</h3>
                   <p className="text-sm text-neutral-500 dark:text-neutral-400">{step.description}</p>
                 </div>
-                {index !== steps.length - 1 && (
+                {/* {index !== steps.length - 1 && (
                   <ArrowRight className="w-6 h-6 text-blue-300 hidden md:block" />
-                )}
+                )} */}
               </motion.div>
             ))}
           </div>

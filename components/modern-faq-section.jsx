@@ -54,9 +54,9 @@ export function ModernFaqSection() {
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-3xl px-8">
+      <div className="lg:max-w-[65%] px-3">
         <div>
-        <h2 className="text-4xl font-bold mb-2">Frequently Asked Questions</h2>
+        <h2 className="md:text-sm lg:text-4xl font-bold mb-2">Frequently Asked Questions</h2>
         <div className="w-12 h-1 bg-[#3399FF] mb-16" />
         </div>
         <div className="space-y-2">
@@ -73,7 +73,7 @@ export function ModernFaqSection() {
                 onClick={() => toggleQuestion(index)}
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-medium pr-8">{faq.question}</h3>
+                  <h3 className="text-sm lg:text-lg font-medium pr-8">{faq.question}</h3>
                   <div className="flex-shrink-0">
                     {activeIndex === index ? (
                       <Minus className="w-5 h-5 text-blue-500" />

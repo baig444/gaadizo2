@@ -87,6 +87,8 @@ export function ModernFooter() {
     "Car Detailing"
   ]
 
+  const placenear =   ["Delhi", "Mumbai", "Bangalore", "Hyderabad", "Chennai"]
+
   return (
     <footer className="hidden lg:flex relative bg-[#0f172a] text-gray-300 overflow-hidden">
       {/* Background Gradient Effects */}
@@ -178,6 +180,26 @@ export function ModernFooter() {
                 ))}
               </ul>
             </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white">Popular Areas Near You</h3>
+              <ul className="space-y-2">
+                {placenear.map((service, index) => (
+                  <motion.li
+                    key={index}
+                    whileHover={{ x: 5 }}
+                    className="flex items-center gap-2"
+                  >
+                    <ChevronRight className="w-4 h-4 text-blue-400" />
+                    <a 
+                      href="#"
+                      className="hover:text-white transition-colors"
+                    >
+                      {service}
+                    </a>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
 
             {/* Locations Dropdown */}
             <div className="md:col-span-2 space-y-4">
@@ -243,13 +265,13 @@ export function ModernFooter() {
       </div>
 
       {/* Chat Button */}
-      <motion.button
+      {/* <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-full shadow-lg hover:shadow-blue-500/25 transition-shadow"
       >
         <MessageCircle className="w-6 h-6" />
-      </motion.button>
+      </motion.button> */}
     </footer>
   )
 }

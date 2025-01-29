@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronDown, X, Fuel } from "lucide-react"
+import { ChevronDown, X, Fuel, Star } from "lucide-react"
 import { Dialog, DialogContent, DialogTitle } from "../components/ui/dialog"
 import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
@@ -93,16 +93,18 @@ export function CarServiceFormComponent() {
 
   return (
     <div className="md:w-full w-full">
-      <div className="bg-white rounded-lg lg:p-6 pt-8 space-y-6 lg:shadow-lg">
+      <div className="bg-white rounded-lg lg:p-6 pt-8 space-y-6 lg:shadow-lg min-h-[60vh]">
         {/* Location Selector */}
+        <h1 className="text-3xl font-bold text-center lg:text-left">Experience The Best
+        Car Services In Gurgaon</h1>
         <div className="mb-4">
           <div className="relative">
-            <select className="w-full p-2 border border-neutral-200 rounded-lg appearance-none bg-white pr-10 dark:border-neutral-800">
+            <select className="w-full p-2 border border-neutral-500 rounded-sm appearance-none bg-white pr-10 dark:border-neutral-800">
               <option>DELHI</option>
               <option>MUMBAI</option>
               <option>BANGALORE</option>
             </select>
-            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-black w-4" />
           </div>
         </div>
 
@@ -110,7 +112,7 @@ export function CarServiceFormComponent() {
         <div className="mb-4">
           <Button
             variant="outline"
-            className="w-full justify-between"
+            className="w-full justify-between rounded-sm border border-neutral-500"
             onClick={() => setIsDialogOpen(true)}
           >
             {selectedBrand && selectedModel && selectedFuel
@@ -125,7 +127,7 @@ export function CarServiceFormComponent() {
           <Input
             type="tel"
             placeholder="ENTER MOBILE NUMBER"
-            className="w-full p-3 border border-neutral-200 rounded-lg dark:border-neutral-800"
+            className="w-full p-3 border border-neutral-600 rounded-sm dark:border-neutral-800"
           />
         </div>
 
@@ -135,17 +137,30 @@ export function CarServiceFormComponent() {
         </Button>
 
         {/* Stats */}
-        <div className="flex justify-between items-center text-sm space-x-10">
-          <div className="flex items-center gap-1">
-            <span className="text-green-600">★</span>
-            <span className="font-semibold">4.7/5</span>
-            <span className="text-gray-600">based on 100k+ Reviews</span>
-          </div>
-          <div>
-            <span className="font-semibold">2 Million+</span>
-            <span className="text-gray-600 block text-xs">Happy Customers</span>
-          </div>
+        <div className="flex items-center justify-center gap-4">
+      {/* Rating Section */}
+      <div className="flex flex-col items-center">
+        <div className="flex items-center gap-1">
+          <Star className="w-4 h-4 fill-green-500 text-green-500" />
+          <span className="font-semibold lg:text-base text-2xl">4.7</span>
+          <span className="text-gray-600 lg:text-base text-2xl">/5</span>
         </div>
+        <div className="text-[11px] text-gray-500 whitespace-nowrap">
+          Based on 150000+ Reviews
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="h-8 w-px bg-gray-800" />
+
+      {/* Customers Section */}
+      <div className="flex flex-col items-center">
+        <div className="font-semibold lg:text-base text-2xl">2 Million+</div>
+        <div className="text-[11px] text-gray-500">
+          Happy Customers
+        </div>
+      </div>
+    </div>
       </div>
 
       {/* Car Selection Dialog */}
