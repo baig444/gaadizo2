@@ -57,7 +57,7 @@ export function CustomServicesComponent() {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 bg-white">
       <div className="lg:max-w-[65%] px-3">
         <div className="mb-8">
           <h2 className="md:text-sm lg:text-4xl font-bold mb-2">Curated Custom Services</h2>

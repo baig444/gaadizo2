@@ -73,24 +73,24 @@ export function AppDownloadComponent() {
               className="flex gap-2"
             >
               <Button 
-                className="bg-black hover:bg-gray-800 text-white px-6 py-6 rounded-xl"
+                className="bg-black hover:bg-gray-800 text-white px-3 py-6 rounded-xl"
                 onClick={() => window.open("'#'", "'_blank'")}
               >
                 <Apple className="w-6 h-6 mr-2" />
                 <div className="text-left">
                   <div className="text-xs">Download on the</div>
-                  <div className="text-lg font-semibold">App Store</div>
+                  <div className="lg:text-lg font-semibold">App Store</div>
                 </div>
               </Button>
 
               <Button 
-                className="bg-black hover:bg-gray-800 text-white px-6 py-6 rounded-xl"
+                className="bg-black hover:bg-gray-800 text-white px-3 py-6 rounded-xl"
                 onClick={() => window.open("'#'", "'_blank'")}
               >
                 <PlayStore className="w-6 h-6 mr-2" />
                 <div className="text-left">
                   <div className="text-xs">GET IT ON</div>
-                  <div className="text-lg font-semibold">Google Play</div>
+                  <div className="lg:text-lg font-semibold">Google Play</div>
                 </div>
               </Button>
             </motion.div>

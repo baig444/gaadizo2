@@ -24,7 +24,7 @@ const Navbar = () => {
   <SheetContent>
     <SheetHeader>
       <SheetDescription>
-      <div className="w-64 bg-white p-4 space-y-4">
+      <div className="w-full flex flex-col items-center bg-white p-4 space-y-4">
       <nav className="space-y-2">
         <a href="#" className="block text-blue-600 font-bold border-b border-gray-200 pb-4">HOME</a>
         <a href="#" className="block text-gray-900 border-b border-gray-200 pb-4">OUR SERVICES</a>

@@ -131,7 +131,7 @@ const categories = [
 
 export function ServicesSection() {
   return (
-    <div className="lg:max-w-[65%] px-2 py-8">
+    <div className="lg:max-w-[95%] px-2 py-8">
        <div className="mb-8 px-5 ">
          <h2 className="md:text-sm lg:text-4xl font-bold mb-2">Our Services</h2>
          <div className="w-12 h-1 bg-[#3399FF] mb-4" />
