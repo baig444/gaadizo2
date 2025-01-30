@@ -11,6 +11,7 @@ import {
   SheetClose,
   SheetFooter,
 } from "@/components/ui/sheet";
+import Link from "next/link";
 const Navbar = () => {
   return (
     <div className="lg:absolute z-20 w-full max-lg:fixed max-lg:top-0">
@@ -29,29 +30,30 @@ const Navbar = () => {
                   <SheetTitle>Menu</SheetTitle>
                   <SheetDescription>
                     <div className="w-full flex flex-col items-center bg-white p-4 space-y-4">
-                      <nav className="space-y-2 w-full">
-                        <a href="#" className="block text-blue-600 font-bold border-b border-gray-200 pb-4">
-                          HOME
-                        </a>
-                        <a href="#" className="block text-gray-900 border-b border-gray-200 pb-4">
-                          OUR SERVICES
-                        </a>
-                        <a href="#" className="block text-gray-900 border-b border-gray-200 pb-4">
-                          GAADIZO SUPER
-                        </a>
-                        <a href="#" className="block text-gray-900 border-b border-gray-200 pb-4">
-                          PARTNERS
-                        </a>
-                        <a href="#" className="block text-gray-900 border-b border-gray-200 pb-4">
-                          LOGIN
-                        </a>
-                        <a href="#" className="block text-white bg-blue-500 rounded-full px-4 py-2 text-center">
-                          MY REWARDS
-                        </a>
-                        <a href="#" className="block text-gray-900">
-                          MORE
-                        </a>
-                      </nav>
+<nav className="space-y-2 w-full">
+  <Link href="/" className="block text-blue-600 font-bold border-b border-gray-200 pb-4">
+    HOME
+  </Link>
+  <Link href="/services" className="block text-gray-900 border-b border-gray-200 pb-4">
+    OUR SERVICES
+  </Link>
+  <Link href="https://www.gaadizo.com/services/membership" target="_blank" className="block text-gray-900 border-b border-gray-200 pb-4">
+    GAADIZO SUPER
+  </Link>
+  <Link href="https://www.gaadizo.com/home/partners" target="_blank" className="block text-gray-900 border-b border-gray-200 pb-4">
+    PARTNERS
+  </Link>
+  <Link href="/login" className="block text-gray-900 border-b border-gray-200 pb-4">
+    LOGIN
+  </Link>
+  <Link href="https://www.gaadizo.com/home/rewards" target="_blank" className="block text-white bg-blue-500 rounded-full px-4 py-2 text-center">
+    MY REWARDS
+  </Link>
+  <Link href="/more" className="block text-gray-900">
+    MORE
+  </Link>
+</nav>
+
                     </div>
                   </SheetDescription>
                 </SheetHeader>
