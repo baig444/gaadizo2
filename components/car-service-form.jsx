@@ -128,7 +128,7 @@ export function CarServiceFormComponent() {
           <Input
             type="tel"
             placeholder="ENTER MOBILE NUMBER"
-            className="w-full p-3 border border-neutral-300 rounded-xs dark:border-neutral-800 outline-none"
+            className="w-full p-2 border border-neutral-300 rounded-xs dark:border-neutral-800 outline-none"
           />
         </div>
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
@@ -20,6 +20,11 @@ export default function Home() {
   const [selectedCity, setSelectedCity] = useState("")
   const [selectedBrand, setSelectedBrand] = useState("")
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
 
   const testimonials = [
@@ -97,7 +102,7 @@ export default function Home() {
           </div>
       <ServicesSection/>
        {/* Testimonials Section */}
-       <div className="hidden lg:block bg-gray-50 py-16 px-10">
+       <div className="hidden lg:block bg-gray-50 px-6 lg:pt-5">
   <div className="lg:max-w-[65%]">
     <div className="mb-8">
       <h2 className="md:text-sm lg:text-4xl font-bold mb-2">What Our Customers Say</h2>
@@ -113,7 +118,12 @@ export default function Home() {
         className="grid grid-cols-1 md:grid-cols-1 gap-6"
       >
         {/* First Testimonial */}
-        <div className="bg-white p-6 rounded-lg shadow-lg">
+        <motion.div
+         initial={{ opacity: 0, y: 20 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        className="bg-white p-6 rounded-lg shadow-lg">
           <div className="flex items-center mb-4">
             <Avatar className="h-12 w-12">
               <AvatarImage
@@ -136,10 +146,15 @@ export default function Home() {
           <p className="text-gray-700 italic">
             {testimonials[currentTestimonial].comment}
           </p>
-        </div>
+        </motion.div>
 
         {/* Second Testimonial */}
-        <div className="bg-white p-6 rounded-lg shadow-lg">
+        <motion.div
+         initial={{ opacity: 0, y: 20 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+        className="bg-white p-6 rounded-lg shadow-lg">
           <div className="flex items-center mb-4">
             <Avatar className="h-12 w-12">
               <AvatarImage
@@ -178,7 +193,7 @@ export default function Home() {
               (currentTestimonial + 1) % testimonials.length
             ].comment}
           </p>
-        </div>
+        </motion.div>
       </motion.div>
 
       {/* Navigation Buttons */}

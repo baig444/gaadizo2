@@ -57,7 +57,7 @@ export function CustomServicesComponent() {
   }
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-5 bg-white">
       <div className="lg:max-w-[65%] px-3">
         <div className="mb-8">
           <h2 className="md:text-sm lg:text-4xl font-bold mb-2">Curated Custom Services</h2>
@@ -72,7 +72,7 @@ export function CustomServicesComponent() {
             ref={containerRef}
             className="scrollbar overflow-x-auto"
           >
-            <div className="flex gap-6 min-w-max pb-4">
+            <div className="flex min-w-max">
               {services.map((service, index) => (
                 <motion.div
                   key={index}
@@ -80,9 +80,9 @@ export function CustomServicesComponent() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Card className="w-48 cursor-pointer bg-transparent border-none">
-                    <CardContent className="p-4">
-                      <div className="relative aspect-square rounded-lg  mb-4 flex items-center justify-center">
+                  <Card className="lg:w-40 w-32 cursor-pointer bg-transparent border-none">
+                    <CardContent className="">
+                      <div className="relative rounded-lg flex items-center justify-center">
                         {service.tag && (
                           <Badge 
                             className={`absolute top-2 right-2 ${service.tagColor} text-white border-0`}
@@ -101,7 +101,7 @@ export function CustomServicesComponent() {
           </div>
 
           {/* Dots Navigation */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2">
             {services.map((_, index) => (
               <button
                 key={index}

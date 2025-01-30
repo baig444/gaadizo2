@@ -35,7 +35,7 @@ export function AppDownloadComponent() {
   ]
 
   return (
-    <section className="py-12 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-2 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-6xl px-3">
         <div className="grid lg:grid-cols-1 gap-12">
           {/* Left Column - App Info */}
@@ -70,10 +70,10 @@ export function AppDownloadComponent() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="flex gap-2"
+              className="flex justify-center gap-8"
             >
               <Button 
-                className="bg-black hover:bg-gray-800 text-white px-3 py-6 rounded-xl"
+                className="bg-black hover:bg-gray-800 text-white px-3 py-6 rounded-md"
                 onClick={() => window.open("'#'", "'_blank'")}
               >
                 <Apple className="w-6 h-6 mr-2" />
@@ -84,7 +84,7 @@ export function AppDownloadComponent() {
               </Button>
 
               <Button 
-                className="bg-black hover:bg-gray-800 text-white px-3 py-6 rounded-xl"
+                className="bg-black hover:bg-gray-800 text-white px-3 py-6 rounded-md"
                 onClick={() => window.open("'#'", "'_blank'")}
               >
                 <PlayStore className="w-6 h-6 mr-2" />
@@ -98,7 +98,7 @@ export function AppDownloadComponent() {
 
           {/* Right Column - Stats */}
           <div className="lg:max-w-[75%]">
-        <div className="hidden lg:grid grid-cols-4 md:grid-cols-4 gap-2 md:gap-8 items-center">
+        <div className="hidden lg:grid grid-cols-4 md:grid-cols-4 gap-2 md:gap-8 items-center mb-5">
           {stats.map((stat, index) => (
             <motion.div
               key={index}

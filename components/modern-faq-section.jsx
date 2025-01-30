@@ -53,7 +53,7 @@ export function ModernFaqSection() {
   }
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-8 bg-gradient-to-b from-white to-gray-50">
       <div className="lg:max-w-[65%] px-3">
         <div>
         <h2 className="md:text-sm lg:text-4xl font-bold mb-2">Frequently Asked Questions</h2>
@@ -63,9 +63,10 @@ export function ModernFaqSection() {
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              initial={false}
-              animate={{ backgroundColor: activeIndex === index ? "#F3F4F6" : "#FFFFFF" }}
-              transition={{ duration: 0.3 }}
+              whileInView={{ scale: 1.02 }}
+              animate={{ backgroundColor: activeIndex === index ? "#F3F4F6" : "#FFFFFF", opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+      transition={{ delay: index * 0.1 }}
               className="border border-gray-200 rounded-lg overflow-hidden"
             >
               <button

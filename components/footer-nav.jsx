@@ -70,12 +70,7 @@ export function FooterNav() {
         <div className="mb-8">
           <Link href="/" className="inline-block">
             <div className="flex items-center justify-center gap-2">
-              <div className="bg-white p-2 rounded-full">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" fill="#1A1A1A"/>
-                </svg>
-              </div>
-              <span className="text-2xl font-bold">Gaadizo</span>
+              <img src="https://www.gaadizo.com/images/logo.png" alt="Gaadizo" className="w-32" />
             </div>
           </Link>
         </div>
@@ -137,7 +132,7 @@ export function FooterNav() {
         <div className="flex justify-center gap-4 mb-8">
           <Link href="#" className="transition-opacity hover:opacity-80">
             <Image
-              src="/placeholder.svg?height=40&width=135"
+              src="https://www.logo.wine/a/logo/Google_Play/Google_Play-Icon-Logo.wine.svg"
               alt="Get it on Google Play"
               width={135}
               height={40}
@@ -145,11 +140,9 @@ export function FooterNav() {
             />
           </Link>
           <Link href="#" className="transition-opacity hover:opacity-80">
-            <Image
-              src="/placeholder.svg?height=40&width=135"
+            <img
+              src="./app-store.png"
               alt="Download on the App Store"
-              width={135}
-              height={40}
               className="h-10 w-auto"
             />
           </Link>

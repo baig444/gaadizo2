@@ -9,10 +9,18 @@
 }
 @font-face {
   font-family: 'GT';
-  src: url('/GT.OTF') format('opentype')
+  src: url('/Gilroy-Regular.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'GB';
+  src: url('/Gilroy-Bold.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'GS';
+  src: url('/Gilroy-SemiBold.ttf') format('truetype')
 }
 body {
-  font-family: 'GT', sans-serif;
+  font-family:'Matter';
 }
 
 .scrollbar {

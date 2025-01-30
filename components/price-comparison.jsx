@@ -44,14 +44,14 @@ export function PriceComparison() {
   return (
     <section className="bg-gradient-to-b from-white to-gray-50">
       <div className="lg:max-w-[65%] px-3 lg:px-8">
-        <div className="mb-16">
+        <div className="mb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h2 className="text-sm md:text-4xl font-bold">
+            <h2 className="text-lg md:text-4xl font-bold">
               Miles ahead... also, in{"'"}
               <span className="text-orange-500">SAVINGS</span>
             </h2>

@@ -64,8 +64,8 @@ export function SparePartsSection() {
   }
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-gray-50 to-white">
-      <div className="lg:max-w-[65%] px-8">
+    <section className="py-10 bg-gradient-to-b from-white via-gray-50 to-white">
+      <div className="lg:max-w-[65%] px-4">
         <div className="mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -194,7 +194,6 @@ export function SparePartsSection() {
           ))}
         </div> */}
       </div>
-
       <hr className="mt-6" />
     </section>
   )
