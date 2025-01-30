@@ -130,7 +130,7 @@ export function FooterNav() {
 
         {/* App Store Buttons */}
         <div className="flex justify-center gap-4 mb-8">
-          <Link href="#" className="transition-opacity hover:opacity-80">
+          <Link href="https://play.google.com/store/search?q=gaadizo&c=apps" className="transition-opacity hover:opacity-80">
             <Image
               src="https://www.logo.wine/a/logo/Google_Play/Google_Play-Icon-Logo.wine.svg"
               alt="Get it on Google Play"
@@ -139,7 +139,7 @@ export function FooterNav() {
               className="h-10 w-auto"
             />
           </Link>
-          <Link href="#" className="transition-opacity hover:opacity-80">
+          <Link href="https://apps.apple.com/in/app/gaadizo-car-service-repair/id1131331142" className="transition-opacity hover:opacity-80">
             <img
               src="./app-store.png"
               alt="Download on the App Store"
