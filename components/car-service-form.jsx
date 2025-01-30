@@ -6,59 +6,59 @@ import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
 
 const carBrands = [
-  { name: "Maruti Suzuki", logo: "/placeholder.svg?height=40&width=40" },
-  { name: "Hyundai", logo: "/placeholder.svg?height=40&width=40" },
-  { name: "Tata", logo: "/placeholder.svg?height=40&width=40" },
-  { name: "Honda", logo: "/placeholder.svg?height=40&width=40" },
-  { name: "Toyota", logo: "/placeholder.svg?height=40&width=40" },
-  { name: "Mahindra", logo: "/placeholder.svg?height=40&width=40" },
+  { name: "Maruti Suzuki", logo: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-9.jpeg" },
+  { name: "Hyundai", logo: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-7.jpeg" },
+  { name: "Tata", logo: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-14.jpeg" },
+  { name: "Honda", logo: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-6.jpeg" },
+  { name: "Toyota", logo: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-15.jpeg" },
+  { name: "Mahindra", logo: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-8.jpeg" },
 ]
 
 const carModels = {
   "Maruti Suzuki": [
-    { name: "Swift", image: "/images/models/swift.png" },
-    { name: "Baleno", image: "/images/models/baleno.png" },
-    { name: "Dzire", image: "/images/models/dzire.png" },
-    { name: "Brezza", image: "/images/models/brezza.png" },
-    { name: "Ertiga", image: "/images/models/ertiga.png" },
+    { name: "Swift", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-9-model-240.jpeg" },
+    { name: "Baleno", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-9-model-205.jpeg" },
+    { name: "Dzire", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-9-model-243.jpeg" },
+    { name: "Brezza", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-9-model-481.jpeg" },
+    { name: "Ertiga", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-9-model-216.jpeg" },
   ],
   "Hyundai": [
-    { name: "i20", image: "/images/models/i20.png" },
-    { name: "Venue", image: "/images/models/venue.png" },
-    { name: "Creta", image: "/images/models/creta.png" },
-    { name: "Verna", image: "/images/models/verna.png" },
+    { name: "i20", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-7-model-154.jpeg" },
+    { name: "Venue", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-7-model-513.jpeg" },
+    { name: "Creta", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-7-model-135.jpeg" },
+    { name: "Verna", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-7-model-177.jpeg" },
   ],
   "Tata": [
-    { name: "Nexon", image: "/images/models/nexon.png" },
-    { name: "Harrier", image: "/images/models/harrier.png" },
-    { name: "Safari", image: "/images/models/safari.png" },
-    { name: "Punch", image: "/images/models/punch.png" },
+    { name: "Nexon", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-14-model-485.jpeg" },
+    { name: "Harrier", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-14-model-508.jpeg" },
+    { name: "Safari", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-14-model-336.jpeg" },
+    { name: "Punch", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-14-model-590.jpeg" },
   ],
   "Honda": [
-    { name: "City", image: "/images/models/city.png" },
-    { name: "Amaze", image: "/images/models/amaze.png" },
-    { name: "WR-V", image: "/images/models/wrv.png" },
-    { name: "Jazz", image: "/images/models/jazz.png" },
+    { name: "City", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-6-model-115.jpeg" },
+    { name: "Amaze", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-6-model-107.jpeg" },
+    { name: "WR-V", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-6-model-477.jpeg" },
+    { name: "Jazz", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-6-model-123.jpeg" },
   ],
   "Toyota": [
-    { name: "Fortuner", image: "/images/models/fortuner.png" },
-    { name: "Innova", image: "/images/models/innova.png" },
-    { name: "Glanza", image: "/images/models/glanza.png" },
-    { name: "Urban Cruiser", image: "/images/models/urban-cruiser.png" },
+    { name: "Fortuner", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-15-model-362.jpeg" },
+    { name: "Innova", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-15-model-489.jpeg" },
+    { name: "Glanza", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-15-model-520.jpeg" },
+    { name: "Urban Cruiser", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-15-model-562.jpeg" },
   ],
   "Mahindra": [
-    { name: "XUV700", image: "/images/models/xuv700.png" },
-    { name: "Thar", image: "/images/models/thar.png" },
-    { name: "Scorpio", image: "/images/models/scorpio.png" },
-    { name: "XUV300", image: "/images/models/xuv300.png" },
+    { name: "XUV700", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-8-model-580.jpeg" },
+    { name: "Thar", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-8-model-190.jpeg" },
+    { name: "Scorpio", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-8-model-188.jpeg" },
+    { name: "XUV300", image: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-8-model-510.jpeg" },
   ],
 };
 
 const fuelTypes = [
-  { type: "Petrol", logo: "/placeholder.svg?height=40&width=40" },
-  { type: "Diesel", logo: "/placeholder.svg?height=40&width=40" },
-  { type: "CNG", logo: "/placeholder.svg?height=40&width=40" },
-  { type: "Electric", logo: "/placeholder.svg?height=40&width=40" },
+  { type: "Petrol", logo: "https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/fuel_type/DIESEL.svg" },
+  { type: "Diesel", logo: "https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/fuel_type/PETROL.svg" },
+  { type: "CNG", logo: "https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/fuel_type/CNG.svg" },
+  { type: "Electric", logo: "https://gomechprod.blob.core.windows.net/gomech-retail/gomechanic_assets/fuel_type/electric.svg" },
 ]
 
 export function CarServiceFormComponent() {
@@ -237,7 +237,7 @@ export function CarServiceFormComponent() {
       <Button
         key={model.name}
         variant="outline"
-        className="h-auto py-4 flex flex-col gap-2"
+        className="h-auto flex flex-col gap-2"
         onClick={() => handleModelSelect(model)}
       >
         <img
@@ -245,7 +245,7 @@ export function CarServiceFormComponent() {
           alt={model}
           width={40}
           height={40}
-          className="w-10 h-10 object-contain"
+          className="w-16 h-16 object-contain"
         />
         <span className="text-sm">{model.name}</span>
       </Button>
