@@ -127,7 +127,7 @@ export function SparePartsSection() {
                   transition={{ delay: index * 0.1 }}
                 >
                   <div 
-                    className="bg-white rounded-xl p-8 flex items-center justify-center h-40 group hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-neutral-800"
+                    className=" rounded-xl flex items-center justify-center "
                     // style={{
                     //   background: `linear-gradient(135deg, white 0%, ${brand.color}08 100%)`
                     // }}
@@ -135,7 +135,7 @@ export function SparePartsSection() {
                     <img
                       src={brand.logo || "/placeholder.svg"}
                       alt={`${brand.name} logo`}
-                      className="max-w-[280px]  object-cover h-auto opacity-70 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
+                      className="max-w-[250px] w-32 object-cover h-auto opacity-70 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110"
                     />
                   </div>
                 </motion.div>
