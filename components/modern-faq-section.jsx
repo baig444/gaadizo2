@@ -63,10 +63,10 @@ export function ModernFaqSection() {
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              whileInView={{ scale: 1.02 }}
-              animate={{ backgroundColor: activeIndex === index ? "#F3F4F6" : "#FFFFFF", opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 20 }}
-      transition={{ delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
               className="border border-gray-200 rounded-lg overflow-hidden"
             >
               <button

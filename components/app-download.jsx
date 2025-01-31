@@ -70,7 +70,7 @@ export function AppDownloadComponent() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="flex space-x-14"
+              className="flex md:space-x-14"
             >
               <Button 
                 className="bg-black hover:bg-gray-800 text-white px-3 py-6 rounded-md"
