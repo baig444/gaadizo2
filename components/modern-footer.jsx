@@ -41,7 +41,7 @@ export function ModernFooter() {
   ]
 
   return (
-    <footer className="bg-[#1B1F3F] text-gray-300 py-12">
+    <footer className="bg-[#1B1F3F] text-gray-300 py-12 hidden lg:block">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
           {/* Services Column */}

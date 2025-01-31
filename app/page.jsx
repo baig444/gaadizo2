@@ -15,6 +15,7 @@ import { WhyChooseSection } from "@/components/why-choose-section"
 import { CarServiceFormComponent } from "@/components/car-service-form"
 import { ServicesSection } from "@/components/services-section"
 import { TestimonialSliderComponent } from "@/components/testimonial-slider"
+import { WhyChooseGaadizo } from "@/components/why-choose-gaadizo"
 
 export default function Home() {
   const [selectedCity, setSelectedCity] = useState("")
@@ -214,6 +215,8 @@ export default function Home() {
       <CustomServicesComponent/>
       <AppDownloadComponent/>
       <SparePartsSection/>
+      <WhyChooseGaadizo/>
+      <hr className="mb-4" />
       <PriceComparison/>
       <WhyChooseSection/>     
     </div>

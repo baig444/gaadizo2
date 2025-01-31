@@ -4,11 +4,11 @@ import Link from 'next/link'
 const services = [
   {
     title: "Periodic Services",
-    icon: './4.png'
+    icon: 'https://5.imimg.com/data5/NC/NB/GLADMIN-13854717/periodic-maintenance-service-250x250.png'
   },
   {
     title: "AC Service & Repair",
-    icon: './5.png'
+    icon: 'https://cdn2.iconfinder.com/data/icons/auto-care/64/car_AC_repair_and_maintanance-512.png'
   },
   {
     title: "Batteries",
@@ -57,8 +57,8 @@ export function ServicesSection() {
     >
       <Link href="#" className="block w-full">
         <div className="flex flex-col items-center justify-center space-y-2 h-full">
-          <div className="w-12 h-12 flex items-center justify-center">
-            <img src={service.icon} alt={service.title} className='w-16 h-16 object-cover' />
+          <div className="w-16 h-16 flex items-center justify-center">
+            <img src={service.icon} alt={service.title} className='w-16 h-16 object-contain' />
             </div> 
           {/* Ensures uniform icon size */}
           <h3 className="text-xs font-medium text-gray-900">{service.title}</h3>
