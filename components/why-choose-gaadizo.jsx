@@ -3,7 +3,7 @@
 export function WhyChooseGaadizo() {
   return (
     (<div id="why-choose" className="mb-8 px-3">
-      <div className="lg:max-w-[65%] px-2 sm:px-6 lg:px-4 bg-[#f2f2f2c2] shadow-xl rounded-lg p-3">
+      <div className="lg:max-w-[65%] px-2 sm:px-6 lg:px-4 bg-[#eae8e86f] shadow-xl rounded-lg p-3">
         <h2 className="text-2xl font-bold mb-8">
           Why Choose Gaadizo In Gurgaon?
         </h2>

@@ -92,7 +92,7 @@ export function CarServiceFormComponent() {
 
   return (
     <div className="md:w-full w-full">
-      <div className="bg-white rounded-sm lg:p-6 pt-8 space-y-6 lg:shadow-lg min-h-[60vh]">
+      <div className="bg-white rounded-sm lg:p-6 pt-8 space-y-6 lg:shadow-lg lg:min-h-[60vh]">
         {/* Location Selector */}
         <h1 className="text-lg lg:text-3xl font-bold text-center lg:text-left">Experience The Best
         Car Services In Gurgaon</h1>
