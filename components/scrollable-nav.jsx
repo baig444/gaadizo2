@@ -48,7 +48,7 @@ export function ScrollableNavComponent() {
   }
 
   return (
-    (<div className=" sticky top-0 z-50">
+    (<div className="hidden lg:block sticky top-0 z-50">
       <div className="lg:max-w-[65%] m-2 sm:px-6 lg:px-8 relative bg-white shadow-md">
         {/* Left Arrow */}
         {showLeftArrow && (
