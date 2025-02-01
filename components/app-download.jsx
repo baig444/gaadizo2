@@ -35,7 +35,7 @@ export function AppDownloadComponent() {
   ]
 
   return (
-    <section className="py-2 bg-gradient-to-b from-white to-gray-50">
+    <section id="download" className="py-2 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-6xl px-3">
         <div className="grid lg:grid-cols-1 gap-12">
           {/* Left Column - App Info */}

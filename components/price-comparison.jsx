@@ -42,7 +42,7 @@ export function PriceComparison() {
   ]
 
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50">
+    <section id="price" className="bg-gradient-to-b from-white to-gray-50">
       <div className="lg:max-w-[65%] px-3 lg:px-8">
         <div className="mb-10">
           <motion.div

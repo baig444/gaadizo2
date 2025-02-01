@@ -16,6 +16,7 @@ import { CarServiceFormComponent } from "@/components/car-service-form"
 import { ServicesSection } from "@/components/services-section"
 import { TestimonialSliderComponent } from "@/components/testimonial-slider"
 import { WhyChooseGaadizo } from "@/components/why-choose-gaadizo"
+import { ScrollableNavComponent } from "@/components/scrollable-nav"
 
 export default function Home() {
   const [selectedCity, setSelectedCity] = useState("")
@@ -101,9 +102,10 @@ export default function Home() {
           <CarServiceFormComponent/>
           </div>
           </div>
+          <ScrollableNavComponent/>
       <ServicesSection/>
        {/* Testimonials Section */}
-       <div className="hidden lg:block bg-gray-50 px-6 lg:pt-5">
+       <div id="testimonials" className="hidden lg:block bg-gray-50 px-6 lg:pt-5">
   <div className="lg:max-w-[65%]">
     <div className="mb-8">
       <h2 className="md:text-sm lg:text-4xl font-bold mb-2">What Our Customers Say</h2>

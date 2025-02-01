@@ -64,7 +64,7 @@ export function SparePartsSection() {
   }
 
   return (
-    <section className="py-10 bg-gradient-to-b from-white via-gray-50 to-white">
+    <section id="spare" className="py-10 bg-gradient-to-b from-white via-gray-50 to-white">
       <div className="lg:max-w-[65%] px-4">
         <div className="mb-16">
           <motion.div

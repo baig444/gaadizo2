@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ModernFooter } from "@/components/modern-footer";
 import { FooterNav } from "@/components/footer-nav";
+import { AppProvider } from "@/context/AppContext";
 
 
 export const metadata = {
@@ -16,10 +17,14 @@ export default function RootLayout({ children }) {
         className={`antialiased`}
       >
         
+        
+        <AppProvider>
         <Navbar/>
-        {children}
-        <ModernFooter/>
+          {children}
+          <ModernFooter/>
         <FooterNav/>
+        </AppProvider>
+        
       </body>
     </html>
   );

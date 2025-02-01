@@ -53,7 +53,7 @@ export function ModernFaqSection() {
   }
 
   return (
-    <section className="py-8 bg-gradient-to-b from-white to-gray-50">
+    <section id="FAQ" className="py-8 bg-gradient-to-b from-white to-gray-50">
       <div className="lg:max-w-[65%] px-3">
         <div>
         <h2 className="md:text-sm lg:text-4xl font-bold mb-2">Frequently Asked Questions</h2>

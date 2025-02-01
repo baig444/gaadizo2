@@ -64,7 +64,7 @@ export function WhyChooseSection() {
   ]
 
   return (
-    <section className="py-8 bg-gradient-to-b from-white to-gray-50">
+    <section id="how-works" className="py-8 bg-gradient-to-b from-white to-gray-50">
       <div className="lg:max-w-[65%] px-4">
         {/* Benefits Section */}
         <div className="mb-20">

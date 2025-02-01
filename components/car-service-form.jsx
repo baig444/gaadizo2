@@ -4,6 +4,7 @@ import { ChevronDown, X, Fuel, Star } from "lucide-react"
 import { Dialog, DialogContent, DialogTitle } from "../components/ui/dialog"
 import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
+import { useAppContext } from "@/context/AppContext"
 
 const carBrands = [
   { name: "Maruti Suzuki", logo: "https://gomechprod.blob.core.windows.net/gm-retail-app/thumbnails/brand-9.jpeg" },
@@ -63,10 +64,8 @@ const fuelTypes = [
 
 export function CarServiceFormComponent() {
   const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const {selectedBrand, setSelectedBrand, selectedModel, setSelectedModel, selectedFuel, setSelectedFuel} = useAppContext()
   const [step, setStep] = useState("brand")
-  const [selectedBrand, setSelectedBrand] = useState("")
-  const [selectedModel, setSelectedModel] = useState("")
-  const [selectedFuel, setSelectedFuel] = useState("")
 
   const handleBrandSelect = (brand) => {
     setSelectedBrand(brand)

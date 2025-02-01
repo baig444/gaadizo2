@@ -1,3 +1,4 @@
+'use client'
 import { Menu } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { PromoBanner } from "./promo-banner";
@@ -12,7 +13,10 @@ import {
   SheetFooter,
 } from "@/components/ui/sheet";
 import Link from "next/link";
+import { useAppContext } from "@/context/AppContext";
 const Navbar = () => {
+  const {selectedBrand, selectedModel, selectedFuel} = useAppContext()
+
   return (
     <div className="lg:absolute z-20 w-full max-lg:fixed max-lg:top-0">
       <PromoBanner />
@@ -70,6 +74,11 @@ const Navbar = () => {
             />
           </div>
         </div>
+        <h1>
+          {selectedBrand && selectedModel && selectedFuel
+              ? `${selectedBrand} ${selectedModel.name} - ${selectedFuel}`
+              : ""}
+              </h1>
       </nav>
     </div>
   );
