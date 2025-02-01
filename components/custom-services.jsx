@@ -137,7 +137,7 @@ export function CustomServicesComponent() {
       <div className="space-y-6">
         {/* Location Selector */}
     <h1 className="text-lg lg:text-3xl font-bold text-center lg:text-left">
-      Experience The Best {selectedService?.name} In Gurgaon
+      Experience The Best {selectedService?.name} Service In Gurgaon
     </h1>
         <div className="mb-4">
           <div className="relative">
